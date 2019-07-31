@@ -1,0 +1,24 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+
+[packages]
+instaloader = "*"
+falcon = "*"
+falcon-cors = "*"
+python-dotenv = "*"
+pyyaml = "*"
+aiohttp = "*"
+marshmallow = "*"
+falcon-multipart = "==0.2.0"
+redis-astra = {editable = true,git = "https://github.com/pilat/redis-astra.git",ref = "e782e3c957d317e708b54750879070cf8a48b919"}
+
+[requires]
+python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true

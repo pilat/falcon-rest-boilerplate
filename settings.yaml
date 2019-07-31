@@ -1,0 +1,27 @@
+# YAML
+
+base_loglevel: DEBUG
+logging:
+    '': DEBUG
+    urllib3: ERROR
+    # requests.packages.urllib3: ERROR
+    PIL: ERROR
+    watchdog: WARNING
+
+DEBUG: True
+
+redis_cache_prefix: dcache
+redis_cache_ttl: 300
+
+redis_default:
+    host: $REDIS_HOST
+    port: 6379
+    db: $REDIS_DB
+
+applications:
+    - rest
+    - api  # after rest because it requires rest
+
+FALCON_ALLOW_ORIGINS:
+    - http://test.com:8080
+    - http://localhost:8080
