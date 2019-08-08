@@ -8,7 +8,7 @@ def get_or_none(model, pk):
         return None
     instance = model(pk)
 
-    # Two case: object contain exists() method or we try run hash_exist
+    # Object contains exists() method or we will try to run hash_exist
     if hasattr(instance, 'exists'):
         return instance if instance.exists() else None
     return instance if instance.hash_exist() else None

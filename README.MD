@@ -1,12 +1,11 @@
 # Falcon Rest Boilerplate
 
-That boilerplate can help you start a new REST appliaction based on Falcon 
-Framewrok.
+That boilerplate can help you start a new REST appliaction based on Falcon Framewrok.
 
 ## What Is Inside?
-- Falcon - Web framework for building speedy web APIs
-- redis-astra - Redis ORM provider
-- Marshmallow - Library to simplified object serialization
+- [Falcon](https://github.com/falconry/falcon) - Web framework for building speedy web APIs
+- [redis-astra](https://github.com/pilat/redis-astra) - Redis ORM provider
+- [Marshmallow](https://github.com/marshmallow-code/marshmallow) - Library to simplified object serialization
 
 ## System Requirements
 - Python 3.7
@@ -30,7 +29,16 @@ Redis-astra is simpler than ORM in Django. You should just define model's fields
 Marshmallow's serializers are used for objects representation (see `serializers/member.py`). It allows to use great features like custom fields in the answer.
 
 ## Demo Application
-`api/` directory contains an example of working as a REST service. Let's use httpie to communicate with our demo app:
+### Installation
+```
+git clone https://github.com/pilat/falcon-rest-boilerplate
+cd falcon-rest-boilerplate
+pipenv install && pipenv shell
+python app.py rest
+```
+
+## Samples
+`api/` directory contains an example of working as a REST service. Let's use [httpie](https://httpie.org/) to communicate with our demo app:
 
 ```
 # Create an member:
