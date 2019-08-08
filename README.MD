@@ -10,6 +10,7 @@ That boilerplate can help you start a new REST appliaction based on Falcon Frame
 ## System Requirements
 - Python 3.7
 - pipenv
+- redis
 
 ## How Does It Work?
 ### Applications
@@ -33,6 +34,15 @@ Marshmallow's serializers are used for objects representation (see `serializers/
 ```
 git clone https://github.com/pilat/falcon-rest-boilerplate
 cd falcon-rest-boilerplate
+```
+
+You can use Docker
+```
+docker-compose up --build
+```
+
+Or run it on your own system:
+```
 pipenv install && pipenv shell
 python app.py rest
 ```

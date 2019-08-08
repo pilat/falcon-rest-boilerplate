@@ -1,0 +1,22 @@
+version: '3.2'
+
+services:
+  redis:
+    image: redis:5.0-alpine
+    container_name: redis
+    # ulimits:
+    #   memlock:
+    #     soft: -1
+    #     hard: -1
+
+  rest:
+    build: .
+    container_name: rest
+    depends_on:
+      - redis
+    command: python app.py rest --host 0.0.0.0
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_DB=0
+    ports:
+      - "8000:8000"
